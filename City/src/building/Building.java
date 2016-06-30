@@ -1,10 +1,20 @@
 package building;
 
+import java.time.Duration;
+import java.time.LocalDate;
 
 public interface Building {
-	public abstract int getFloor();
+	LocalDate getCreateDate();
 	
-	public abstract int getBasement();
+	Duration getAge();
 	
-	public abstract int getHeight();
+	int getFloor();
+	
+	int getBasement();
+	
+	int getHeight();
+	
+	boolean isBuildingTaxable();
+	
+	double getBuildingTax();
 }
