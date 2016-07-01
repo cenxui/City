@@ -1,8 +1,8 @@
 package building;
 
-import land.Farm;
+import asset.Structure;
 
-public abstract class FarmHouse extends Structure implements Farm, Building {
+public abstract class FarmHouse extends Structure {
 
 	FarmHouse(double Width, double Long, double Height, int Floor, int Basement) {
 		super(Width, Long, Height, Floor, Basement);

@@ -2,6 +2,8 @@ package asset;
 
 import java.time.Duration;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 import building.Building;
 
@@ -19,6 +21,7 @@ public abstract class Structure implements Building ,Soldable , Taxable, Rentabl
 	private final double mHeight;
 	private final int mFloor;
 	private final int mBasement;
+	private final List<LandLord> mHistoryOwner;
 	
 	protected Structure(double Width, double Long, double Height, int Floor, int Basement) {
 		mWidth = Width;
@@ -26,6 +29,11 @@ public abstract class Structure implements Building ,Soldable , Taxable, Rentabl
 		mHeight = Height;
 		mFloor = Floor;
 		mBasement = Basement;
+		mHistoryOwner = new ArrayList<>();
+	}
+	
+	public LandLord getLandOwners() {
+		return mHistoryOwner.get(mHistoryOwner.size()-1);
 	}
 
 	@Override

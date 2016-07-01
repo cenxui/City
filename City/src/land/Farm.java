@@ -1,5 +1,7 @@
 package land;
 
-public interface Farm extends ProduceLand {
+import asset.ProduceLand;
 
+public interface Farm extends ProduceLand ,Buildable {
+	
 }

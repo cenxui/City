@@ -2,8 +2,6 @@ package asset;
 
 import java.time.LocalDate;
 
-import land.LandLord;
-
 interface Rentable {
 	boolean isRentible();
 	boolean isRentedState();
