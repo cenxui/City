@@ -1,7 +1,6 @@
 package building;
 
-import java.time.Duration;
-import java.time.LocalDate;
+import asset.Structure;
 
 /**
  * 
@@ -9,22 +8,10 @@ import java.time.LocalDate;
  *	Building is for abstract buildings conception.
  */
 
-public interface Building {
-	LocalDate getCreateDate();
+public abstract class Building extends Structure{
+
+	protected Building(double Width, double Long, double Height, int Floor, int Basement) {
+		super(Width, Long, Height, Floor, Basement);
+	}
 	
-	Duration getAge();
-	
-	int getFloor();
-	
-	int getBasement();
-	
-	double getWidthInMeter();
-	
-	double getLongInMeter();
-	
-	double getHeightInMeter();
-	
-	boolean isBuildingTaxable();
-	
-	double getBuildingTax();
 }

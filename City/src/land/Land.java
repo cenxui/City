@@ -1,7 +1,7 @@
 package land;
 
-public interface Land {
-	int getAra();
-	int getWidth();
-	int getLong();	
+import asset.Territory;
+
+public interface Land extends Territory {
+
 }

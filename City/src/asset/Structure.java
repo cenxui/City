@@ -14,7 +14,7 @@ import building.Building;
  * please remember initial BuildingNumber 
  */
 
-public abstract class Structure implements Building ,Soldable , Taxable, Rentable{
+public abstract class Structure implements Soldable , Taxable, Rentable{
 	private static long BuildingNumber;
 	
 	private final LocalDate mCreateDate = LocalDate.now();
@@ -52,37 +52,30 @@ public abstract class Structure implements Building ,Soldable , Taxable, Rentabl
 		return mHistoryOwner.get(mHistoryOwner.size()-1);
 	}
 
-	@Override
 	public LocalDate getCreateDate() {
 		return mCreateDate;
 	}
 
-	@Override
 	public Duration getAge() {
 		return Duration.between(mCreateDate, LocalDate.now());
 	}
 	
-	@Override
 	public int getFloor() {
 		return mFloor;
 	}
 	
-	@Override
 	public int getBasement() {
 		return mBasement;
 	}
 	
-	@Override
 	public double getLongInMeter() {
 		return mLong;
 	}
-	
-	@Override
+
 	public double getWidthInMeter() {
 		return mWidth;
 	}
 	
-	@Override
 	public double getHeightInMeter() {
 		// TODO Auto-generated method stub
 		return mHeight;
