@@ -1,6 +1,6 @@
 package land;
 
-public interface Land {
+interface Land {
 	int getAra();
 	int getWidth();
 	int getLong();	

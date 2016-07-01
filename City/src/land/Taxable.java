@@ -1,6 +1,6 @@
 package land;
 
-public interface Taxable {
+interface Taxable {
 	boolean isTaxable();
 	double getTax();
 }

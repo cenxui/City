@@ -2,9 +2,10 @@ package land;
 
 import java.time.LocalDate;
 
-public interface Rentable {
+interface Rentable {
 	boolean isRentedState();
-	int getRent();
+	double getRent();
+	void setRent(double rent);
 	LocalDate getStartDate();
 	LocalDate getEndDate();
 }

@@ -1,5 +1,5 @@
 package land;
 
-public abstract class Farm implements Land, Rentable{
-	
+public interface Farm extends ProduceLand {
+
 }
