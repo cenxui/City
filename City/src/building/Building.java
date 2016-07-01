@@ -3,6 +3,12 @@ package building;
 import java.time.Duration;
 import java.time.LocalDate;
 
+/**
+ * 
+ * @author xenxui
+ *	Building is for abstract buildings conception.
+ */
+
 public interface Building {
 	LocalDate getCreateDate();
 	
@@ -12,7 +18,11 @@ public interface Building {
 	
 	int getBasement();
 	
-	int getHeight();
+	double getWidthInMeter();
+	
+	double getLongInMeter();
+	
+	double getHeightInMeter();
 	
 	boolean isBuildingTaxable();
 	

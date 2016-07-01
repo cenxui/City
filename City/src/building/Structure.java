@@ -3,49 +3,62 @@ package building;
 import java.time.Duration;
 import java.time.LocalDate;
 
-public abstract class Structure implements Building {
-	private LocalDate mCreateDate = LocalDate.now();
+/**
+ * Structure is for default building, which
+ * has create time and it's age.
+ * @author xenxui
+ *
+ */
+
+public abstract class Structure  implements Building {
+	private final LocalDate mCreateDate = LocalDate.now();
+	private final double mWidth;
+	private final double mLong;
+	private final double mHeight;
+	private final int mFloor;
+	private final int mBasement;
+	
+	Structure(double Width, double Long, double Height, int Floor, int Basement) {
+		mWidth = Width;
+		mLong = Long;
+		mHeight = Height;
+		mFloor = Floor;
+		mBasement = Basement;
+	}
 
 	@Override
 	public LocalDate getCreateDate() {
-
 		return mCreateDate;
 	}
 
 	@Override
 	public Duration getAge() {
-		// TODO Auto-generated method stub
 		return Duration.between(mCreateDate, LocalDate.now());
 	}
-
+	
 	@Override
 	public int getFloor() {
-		// TODO Auto-generated method stub
-		return 0;
+		return mFloor;
 	}
-
+	
 	@Override
 	public int getBasement() {
-		// TODO Auto-generated method stub
-		return 0;
+		return mBasement;
 	}
-
+	
 	@Override
-	public int getHeight() {
-		// TODO Auto-generated method stub
-		return 0;
+	public double getLongInMeter() {
+		return mLong;
 	}
-
+	
 	@Override
-	public boolean isBuildingTaxable() {
-		// TODO Auto-generated method stub
-		return false;
+	public double getWidthInMeter() {
+		return mWidth;
 	}
-
+	
 	@Override
-	public double getBuildingTax() {
+	public double getHeightInMeter() {
 		// TODO Auto-generated method stub
-		return 0;
+		return mHeight;
 	}
-
 }
