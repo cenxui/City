@@ -1,6 +1,6 @@
 package land;
 
-public interface ProduceLand extends Land{
-	int getSubsidy();
-	void setSubsidy();
+public abstract class ProduceLand implements Land, Buildable{
+	abstract int getSubsidy();
+	abstract void setSubsidy();
 }

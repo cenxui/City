@@ -5,8 +5,6 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-import building.Building;
-
 /**
  * Structure is for default building, which
  * has create time and it's age.

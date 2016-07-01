@@ -1,5 +1,5 @@
 package land;
 
-public interface BuildingLand extends Land {
+public abstract class BuildingLand implements Land, Buildable {
 
 }
