@@ -45,7 +45,9 @@ public abstract class Structure implements Soldable , Taxable, Rentable{
 	}
 	
 	public static void distoryBuilding() {
-		BuildingNumber = BuildingNumber -1;
+		if (BuildingNumber >= 1) {
+			BuildingNumber = BuildingNumber -1;
+		}
 	}
 	
 	public LandLord getLandOwners() {
