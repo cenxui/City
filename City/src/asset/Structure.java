@@ -11,10 +11,12 @@ import building.Building;
  * Structure is for default building, which
  * has create time and it's age.
  * @author xenxui
- *
+ * please remember initial BuildingNumber 
  */
 
 public abstract class Structure implements Building ,Soldable , Taxable, Rentable{
+	private static long BuildingNumber;
+	
 	private final LocalDate mCreateDate = LocalDate.now();
 	private final double mWidth;
 	private final double mLong;
@@ -23,6 +25,10 @@ public abstract class Structure implements Building ,Soldable , Taxable, Rentabl
 	private final int mBasement;
 	private final List<LandLord> mHistoryOwner;
 	
+	static{
+		BuildingNumber = 0;
+	}
+	
 	protected Structure(double Width, double Long, double Height, int Floor, int Basement) {
 		mWidth = Width;
 		mLong = Long;
@@ -30,6 +36,16 @@ public abstract class Structure implements Building ,Soldable , Taxable, Rentabl
 		mFloor = Floor;
 		mBasement = Basement;
 		mHistoryOwner = new ArrayList<>();
+		BuildingNumber = BuildingNumber +1;
+	}
+	
+	public static long getGlobalBuidingNumber() {
+		// TODO Auto-generated method stub
+		return BuildingNumber;
+	}
+	
+	public static void distoryBuilding() {
+		BuildingNumber = BuildingNumber -1;
 	}
 	
 	public LandLord getLandOwners() {
