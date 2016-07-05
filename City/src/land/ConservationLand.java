@@ -1,5 +1,5 @@
 package land;
 
-public abstract class ConservationLand implements Land {
+public abstract class ConservationLand extends Land {
 
 }

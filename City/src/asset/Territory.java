@@ -1,7 +1,7 @@
 package asset;
 
-public interface Territory extends Taxable, Soldable, Rentable{
-	int getAra();
-	int getWidth();
-	int getLong();	
+public abstract class Territory implements Taxable, Soldable, Rentable{
+	abstract int getAra();
+	abstract int getWidth();
+	abstract int getLong();	
 }
