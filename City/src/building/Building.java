@@ -9,45 +9,16 @@ import asset.Structure;
  */
 
 public abstract class Building extends Structure implements Elevator, Basement{
-	private final int mFloor;
-	private final int mBasement;
 	
-	/**
-	 * 
-	 * @param Width 
-	 * @param Long
-	 * @param Height
-	 * @param Depth
-	 * @param Floor the building floor
-	 * @param Basement the basement floor number , 0 if it has no basement 
-	 */
-	protected Building(double Width, double Long, double Height, double Depth,
-			int Floor, int Basement) {
-		super(Width, Long, Height, Depth);
-		mFloor = Floor;
-		mBasement = Basement;
-	}
+	public abstract int getFloor();
+
+	public abstract Address getAddress();
 	
-	public static long getGlobalBuidingNumber() {
-		return Structure.getGlobalBuidingNumber();
-	}
+	public abstract double getLongInMeter();
+
+	public abstract double getWidthInMeter();
 	
-	public static boolean distoryBuilding() {
-		return Structure.distoryBuilding();
-	}
+	public abstract double getHeightInMeter();
 	
-	/**
-	 * @return mBasement
-	 */
-	@Override
-	public int getBasementFloor() {
-		return mBasement;
-	}
-	
-	/**
-	 * @return the mFloor
-	 */
-	public int getFloor() {
-		return mFloor;
-	}
+	public abstract double getDepthInMeter();
 }
