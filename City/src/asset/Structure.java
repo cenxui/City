@@ -19,65 +19,76 @@ public abstract class Structure implements Soldable , Taxable, Rentable{
 	private final double mWidth;
 	private final double mLong;
 	private final double mHeight;
-	private final int mFloor;
-	private final int mBasement;
+	private final double mDepth;
 	private final List<LandLord> mHistoryOwner;
 	
 	static{
 		BuildingNumber = 0;
 	}
 	
-	protected Structure(double Width, double Long, double Height, int Floor, int Basement) {
+	/**
+	 * 
+	 * @param Width the building width in meter
+	 * @param Long the building long in meter
+	 * @param Height the building height in meter
+	 * @param Depth the building depth in meter
+	 */
+	
+	protected Structure(double Width, double Long, double Height, double Depth) {
 		mWidth = Width;
 		mLong = Long;
 		mHeight = Height;
-		mFloor = Floor;
-		mBasement = Basement;
+		mDepth = Depth;
 		mHistoryOwner = new ArrayList<>();
 		BuildingNumber = BuildingNumber +1;
 	}
 	
+	/**
+	 * return the building number in global
+	 * @return
+	 */
 	public static long getGlobalBuidingNumber() {
-		// TODO Auto-generated method stub
 		return BuildingNumber;
 	}
-	
-	public static void distoryBuilding() {
+	/**
+	 * true if it can be destroy.
+	 * @return whether it can be destroy or not.
+	 */
+	public static boolean distoryBuilding() {
+		if (BuildingNumber<1) {
+			return false;
+		}
 		if (BuildingNumber >= 1) {
 			BuildingNumber = BuildingNumber -1;
 		}
+		return true;
 	}
 	
-	public LandLord getLandOwners() {
+	public final LandLord getLandOwners() {
 		return mHistoryOwner.get(mHistoryOwner.size()-1);
 	}
 
-	public LocalDate getCreateDate() {
+	public final LocalDate getCreateDate() {
 		return mCreateDate;
 	}
 
-	public Duration getAge() {
+	public final Duration getAge() {
 		return Duration.between(mCreateDate, LocalDate.now());
 	}
 	
-	public int getFloor() {
-		return mFloor;
-	}
-	
-	public int getBasement() {
-		return mBasement;
-	}
-	
-	public double getLongInMeter() {
+	public final double getLongInMeter() {
 		return mLong;
 	}
 
-	public double getWidthInMeter() {
+	public final double getWidthInMeter() {
 		return mWidth;
 	}
 	
-	public double getHeightInMeter() {
-		// TODO Auto-generated method stub
+	public final double getHeightInMeter() {
 		return mHeight;
+	}
+	
+	public final double getDepthInMeter() {
+		return mDepth;
 	}
 }
