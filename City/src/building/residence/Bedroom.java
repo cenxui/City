@@ -1,10 +1,7 @@
-package building;
+package building.residence;
 
-interface Bedroom extends RoomBasicEquipment{
-	public static final int KingBed = 3;
-	public static final int QueenBed = 2;
-	public static final int TwinBed = 1;
-	public static final int FutonBed = 0;
+interface Bedroom {
+	
 	
 	boolean isRedecoratable();
 	boolean hasBedroom();
