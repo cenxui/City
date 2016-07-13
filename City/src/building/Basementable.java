@@ -1,6 +1,6 @@
 package building;
 
-interface Basement {
+interface Basementable {
 	boolean hasBasment();
 	int getBasementFloor();
 }
