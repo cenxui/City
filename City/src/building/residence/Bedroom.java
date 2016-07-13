@@ -2,8 +2,6 @@ package building.residence;
 
 interface Bedroom {
 	
-	
-	boolean isRedecoratable();
 	boolean hasBedroom();
 	boolean hasDresser();
 	boolean hasWardrodbe();

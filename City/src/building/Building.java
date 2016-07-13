@@ -8,7 +8,7 @@ import asset.Structure;
  *	Building is for abstract buildings conception.
  */
 
-public abstract class Building extends Structure implements Elevator, Basement{
+public abstract class Building extends Structure implements Elevator, Basementable{
 	
 	public abstract int getFloor();
 
