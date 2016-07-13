@@ -1,6 +1,6 @@
 package building;
 
-interface Bedroom {
+interface Bedroom extends RoomBasicEquipment{
 	public static final int KingBed = 3;
 	public static final int QueenBed = 2;
 	public static final int TwinBed = 1;
