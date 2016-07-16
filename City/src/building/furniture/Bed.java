@@ -1,7 +1,7 @@
 package building.furniture;
 
 public class Bed extends Furniture {
-	public enum Typ {
+	public enum Type {
 	    KingBed,
 		QueenBed,
 		TwinBed,
