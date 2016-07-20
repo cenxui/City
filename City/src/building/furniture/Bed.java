@@ -6,5 +6,7 @@ public class Bed extends Furniture {
 		QueenBed,
 		TwinBed,
 		FutonBed,
+		BunkBed,
+		BabyCrib
 	}
 }
