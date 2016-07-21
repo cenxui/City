@@ -4,6 +4,7 @@ interface Bedroom {
 	boolean hasBedroom();
 	boolean hasDresser();
 	boolean hasWardrodbe();
+	boolean hasWalkInCloset();
 	boolean hasHeadboardCabinet();
 	boolean hasChestOfDrawers();
 	boolean hasDressingTable();

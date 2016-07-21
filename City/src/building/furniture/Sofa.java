@@ -20,7 +20,7 @@ public class Sofa extends Furniture {
 		return mType;
 	}
 	
-	public Material gMaterial() {
+	public Material getMaterial() {
 		return mMaterial;
 	}
 	
