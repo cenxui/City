@@ -1,6 +1,8 @@
 package building.residence;
 
-interface Bedroom {
+import building.Room;
+
+interface Bedroom extends Room {
 	boolean hasBedroom();
 	boolean hasDresser();
 	boolean hasWardrodbe();

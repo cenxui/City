@@ -1,6 +1,8 @@
 package building.residence;
 
-interface Lavatory {
+import building.Room;
+
+interface Lavatory extends Room {
 	boolean hasLavatory();
 	boolean hasToilet();
 	boolean hasUrinal();

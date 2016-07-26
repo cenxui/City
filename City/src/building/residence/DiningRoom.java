@@ -1,6 +1,8 @@
 package building.residence;
 
-interface DiningRoom {
+import building.Room;
+
+interface DiningRoom extends Room {
 	boolean hasDiningRoom();
 	boolean hasDiningTable();
 	boolean hasCabinet();

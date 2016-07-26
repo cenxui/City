@@ -1,6 +1,8 @@
 package building.residence;
 
-interface StoreRoom {
+import building.Room;
+
+interface StoreRoom extends Room {
 	boolean hasStoreRoom();
 
 }
