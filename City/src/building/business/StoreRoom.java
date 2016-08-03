@@ -1,13 +1,7 @@
 package building.business;
 
-interface StoreRoom {
+interface StoreRoom extends BusinessRoom {
 	boolean hasStoreRoom();
 	Size getStoreRoomSize();
 	
-	enum Size {
-		Small,
-		Medium,
-		Large
-	}
-
 }

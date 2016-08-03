@@ -1,8 +1,6 @@
 package building.business;
 
-import building.Room;
-
-interface Lobby extends Room {
+interface Lobby extends BusinessRoom {
 	boolean hasLobby();
 	boolean hasCounter();
 	boolean hasSofa();

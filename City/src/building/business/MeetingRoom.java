@@ -1,15 +1,7 @@
 package building.business;
 
-import building.Room;
-
-interface MeetingRoom extends Room {
+interface MeetingRoom extends BusinessRoom {
 	boolean hasMeetingRoom();
-	MeetingRoomSize getMeetingRoomSize();
-	
-	enum MeetingRoomSize {
-		Small,
-		Medium,
-		Large
-	}
+	Size getMeetingRoomSize();
 
 }

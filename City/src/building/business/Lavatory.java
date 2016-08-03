@@ -1,9 +1,10 @@
 package building.business;
 
-interface Lavatory {
+interface Lavatory extends BusinessRoom {
 	boolean hasLavatory();
 	int getToiletNumber();
 	Type getLavatoryType();
+	Size getLavatorySize();
 
 	enum Type {
 		forMale,

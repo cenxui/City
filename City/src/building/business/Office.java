@@ -1,14 +1,8 @@
 package building.business;
 
-interface Office {
+interface Office extends BusinessRoom {
 	boolean hasOffice();
 	int getOfficeFloor();
 	Size getOfficeSize();
-	
-	enum Size {
-		Small,
-		Medium,
-		Large
-	}
 
 }
